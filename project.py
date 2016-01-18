@@ -19,6 +19,7 @@ colors = ['r', 'b', 'g', 'y']   #some colors for the objects
 
 values = [2, 1, 0, 3]
 
+
 #orizei to plhthos twn frames gia to animation
 num_of_frames = 360
 
@@ -33,9 +34,7 @@ def animate(i):
     objects = [] #arxikopoihsh adeias listas antikeimenwn
     r_circle = 0.45 #aktina kuklwn
     
-    if((i%90 == 0)):
-        animate.aktina_peristrofhs = values[animate.z]
-        
+    
     
     if(i >= 270):
         i = -i
@@ -57,4 +56,4 @@ anim = animation.FuncAnimation(fig, animate, init_func=init,
                                frames=num_of_frames, interval=20, blit=True)
 
 #eksagwgh animation se video                               
-anim.save("v2.mp4", fps=30)
+anim.save("v1.mp4", fps=30)
