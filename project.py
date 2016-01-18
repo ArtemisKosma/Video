@@ -43,7 +43,7 @@ def animate(i):
     #kai isapexoun metaksu tous, sthn sunexeia ta topothetei me thn bohtheia 
     #twn aksonwn sthn katallhlh thesh    
     for t in range(num_objects): 
-            objects.append(ax.add_patch( plt.Circle((x_peristrofhs + animate.aktina_peristrofhs * np.sin(2 * t * np.pi/(num_objects) + np.radians(-i)), y_peristrofhs + animate.aktina_peristrofhs * np.cos(2 * t * np.pi/(num_objects) + np.radians(-i))),r_circle,color=colors[t % 1]) ))
+            objects.append(ax.add_patch( plt.Circle((x_peristrofhs + animate.aktina_peristrofhs * np.sin(2 * t * np.pi/(num_objects) + np.radians(-i)), y_peristrofhs + animate.aktina_peristrofhs * np.cos(2 * t * np.pi/(num_objects) + np.radians(-i))),r_circle,color=colors[t % 4]) ))
     
     return objects
 
@@ -56,4 +56,4 @@ anim = animation.FuncAnimation(fig, animate, init_func=init,
                                frames=num_of_frames, interval=20, blit=True)
 
 #eksagwgh animation se video                               
-anim.save("v1.mp4", fps=30)
+anim.save("v2.mp4", fps=30)
