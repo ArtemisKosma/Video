@@ -33,7 +33,8 @@ def animate(i):
     objects = [] #arxikopoihsh adeias listas antikeimenwn
     r_circle = 0.45 #aktina kuklwn
     
-    
+    if((i%90 == 0)):
+        animate.aktina_peristrofhs = values[animate.z]
         
     
     if(i >= 270):
